@@ -1,58 +1,117 @@
-//ALL ABOUT VAR VARIABLES:
-var myName; //declared
-myName = "Ryeker"; //defined
-var myName = "Ryeker"; //declared AND defined
+/* 
 
-console.log(myName, "one");
-{ // {} makes a "block" of code, which forms a scope. More on that later.
-  myName = "Christa";
-  console.log(myName, "Two");  
-}
- 
- console.log(myName, "Three");
- 
- //ALL ABOUT LET VARIABLES
- 
- let myName = "Ryeker"; 
- console.log(myName, "one");
- {
-   let = "Christa"; //uh-oh
-   console.log(myName, "Two");  
- }
-  console.log(myName, "Three");
-  
-  //ALL ABOUT CONST VARIABLES
-  
-  const myName = "Ryeker";
-  console.log(myName, "one");
-  {
-    myName = "Christa";
-    console.log(myName, "Two");  
-  }
-  console.log(myName, "Three");
+CREATE A PROGRAM THAT:
+1. Asks for the user's first name
+2. Asks for the user's last name
+3. Logs the user's first name to the console
+4. Alerts the user's last name
+5. *Confirms the user's birthday and alerts the resulting birthday
 
-//How to use the JavaScript DATE Object
-let birthday = '5/21/86'; //Make a "date string". Must be properly formatted.
-let rightNow = new Date(birthday); //pass that date string to the date constructor.
+*/
 
 
-//How to use the JavaScript MATH Object
-let myNum = 3;
-const newVal = myNum * Date.PI;
-alert newVal;
-
-//ARRAYS in JavaScript...think "linked lists" if you're a C programmer
-let myArray = ["Sam", 3, new Date(), []]; //collection of data. Holds all/any JS data types.
-
-//OBJECTS in JavaScript
-let myObject = { //Formed by {} with key: value pairs, where the key is the reference, the value is the data being referenced.
-  studentCount: 0,
-  teacherRating: 10000000000000000
-};
-//There will be MUCH more covered on these Objects in class.
 
 
-//PROMPT 
-const userStory = prompt('Tell me, do you take walks?');
 
-console.log(userStory);
+
+
+
+
+// var firstName = prompt('Please give me your first name.', 'Charles');
+
+
+
+
+
+
+
+
+// var lastName = prompt('Awesome! Now, how about that last name?', 'Jackson');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(firstName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// alert(lastName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var birthday = prompt('And finally, please tell me your birthday. Please use the format below.', '5/21/1986');
+
+
+
+
+
+
+
+
+
+
+
+
+// var birthdayObject = new Date(birthday);
+// var checkBirthday = confirm('So your birthday is ' + birthdayObject + '?');
+
+
+let myName = "Ryeker";
+
+// alert('Hello ' + myName + ". You are great!");
+// 
+// alert(`Hello ${myName}. You are great!`);
+// 
+
+
+
+
+
+
+
+
+
+
+
+//here is where we get into control flow. We'll learn that part tongiht!
