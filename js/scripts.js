@@ -1,17 +1,19 @@
+let arr = [10, "array", ["cheese", 12, ["Bryan is cool", true]], 11, 30, -1000, 0];
 
 
-let response = prompt('hey you are the best, tell me stuff');
+let backwards = arr.sort();
+console.log(backwards);
 
-let secondResponse = prompt('tell me something else');
+// let bestEver = arr.slice(); //Returns an exact copy of original
+// 
+// let noCoteacher = arr.slice(1); //returns copy of arr starting at index 1;
 
-if(response) {
-  //do more stuff
-} else {
-  //Do other stuff
-}
+// let teacherIndex = arr.lastIndexOf("Ryeker");
+// console.log(teacherIndex);
+// 
+// let onlyStudents = arr.splice(teacherIndex, 1, 0);
 
-
-
+// console.log(onlyStudents);
 
 
 
