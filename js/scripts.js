@@ -1,5 +1,3 @@
-/*jshint esversion: 6 */
-
 let answer = prompt('Thank you for participating in my survey.\n\n Please enter your birth date', 'mm/dd/yyyy');
 console.log(answer);
 let birthday = answer !== null ? new Date(answer) : '';
