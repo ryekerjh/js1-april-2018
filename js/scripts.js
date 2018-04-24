@@ -1,32 +1,23 @@
-let arr = [10, "array", ["cheese", 12, ["Bryan is cool", true]], 11, 30, -1000, 0];
+/*
+1. Prompts your user for their name.
+2. Next, ask the user's favorite color. (Provide the user with the basic 10 colors as options i.e. red, orange, yellow, green, blue, pink, purple, black, white, and grey).
+3. Depending on the color, write 9 different responses for the possible answers. Include the user's name in the response message.
+*/
 
+var userName = prompt("What's your name, doe?");
+var favColor = prompt("How about dat fav colly, doe?", "Please choose from: red, blue, green, purple, pink, yellow, brown, black, white, grey.");
+let messageToUser;
 
-let backwards = arr.sort();
-console.log(backwards);
+  switch(favColor.toLowerCase()) {
+    case 'blue':  
+      messageToUser = 'Blue is the BEST!';
+      break;
+    case 'red':
+      messageToUser = "Red is aight, I guess...";
+      break;
+    default:
+      messageToUser = "Oh come on, man. A REAL COLOR!!";
+      break;
+}
 
-// let bestEver = arr.slice(); //Returns an exact copy of original
-// 
-// let noCoteacher = arr.slice(1); //returns copy of arr starting at index 1;
-
-// let teacherIndex = arr.lastIndexOf("Ryeker");
-// console.log(teacherIndex);
-// 
-// let onlyStudents = arr.splice(teacherIndex, 1, 0);
-
-// console.log(onlyStudents);
-
-
-
-
-
-
-
-
-
-
-
-// var birthday = new Date('5/21/86');
-// var today = new Date();
-// var timeDiff = Math.abs(today.getTime() - birthday.getTime());
-// var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
-// console.log(timeDiff, diffDays/365);
+alert(messageToUser);
