@@ -4,8 +4,26 @@
 3. Depending on the color, write 9 different responses for the possible answers. Include the user's name in the response message.
 */
 
+
+
+
+
+
 var userName = prompt("What's your name, doe?");
-var favColor = prompt("How about dat fav colly, doe?", "Please choose from: red, blue, green, purple, pink, yellow, brown, black, white, grey.");
+
+
+
+
+
+
+
+var favColor = prompt("How about dat fav colly, doe? Please choose from these: ", "Please choose from: red, blue, green, purple, pink, yellow, brown, black, white, grey.");
+
+
+
+
+
+
 let messageToUser;
 
   switch(favColor.toLowerCase()) {
@@ -20,4 +38,4 @@ let messageToUser;
       break;
 }
 
-alert(messageToUser);
+alert(`Hey there, ${userName}, ${messageToUser}`);
