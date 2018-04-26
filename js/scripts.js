@@ -1,34 +1,41 @@
-// console
-//   .log( //This is where the function is called
-//       "hello world" //This is the argument/parameter
-//     ); //Method which is a type of function
-//     //In your browser's console, the RETURN is what gets printed;
-// function greet(type, name, greeting) { //FUNCTION DEFINTION
-  // return `${type} ${name}, ${greeting}!`;
-// }
+let todos = [];
 
-// let myGreeting = sayHello("Goodbye", "Connie", "You're the greatest!"); //CALL SITE
+let todo1 = [prompt("What do you want to do first?", "Eat")];
+let todo2 = [prompt("What do you want to do second?", "Eat")];
+let todo3 = [prompt("What do you want to do third?", "Eat")];
+//THIS IS A GOOD PLACE FOR EDGE CASING
+todos.push(todo1, todo2, todo3);
 
-// alert(myGreeting);
-
-
-
-function sayMyFav() {
-  let fav = "Cheese";
-  function eat() {
-    alert(fav);
-  }
-  eat();
+for(let i = 0; i < todos.length; i++) {
+  
+  let timeline = prompt(`How many days will it take to get ${todos[i][0]} done?`, "2");
+  
+  timeline = !isNaN(parseInt(timeline)) ? parseInt(timeline) : 2;
+  
+  todos[i].unshift(timeline);
 }
 
-sayMyFav();
-alert(fav);
+todos.sort();
+console.log(todos, 'after sort');
+
+let longest = todos[0];
+let j = 0;
+while(j < todos.length) {
+  if(todos[j][0] > longest[0]) longest = todos[j]; //valid inline if statement
+  longest = todos[j][0] > longest[0] ? longest = todos[j] : longest = longest; //TERNARY VERSION
+  console.log(todos[j][1]);
+  j++;
+}
+console.log(longest);
+longest.push('this');
 
 
 
 
-
-
-
-
-//
+let z = 0;
+do {
+  if(todos[z][todos[z].length - 1] !== "this") {
+    todos[z].push("done");
+  }
+  z++;
+}
