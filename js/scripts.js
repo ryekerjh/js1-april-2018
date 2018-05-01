@@ -1,41 +1,48 @@
-let todos = [];
-
-let todo1 = [prompt("What do you want to do first?", "Eat")];
-let todo2 = [prompt("What do you want to do second?", "Eat")];
-let todo3 = [prompt("What do you want to do third?", "Eat")];
-//THIS IS A GOOD PLACE FOR EDGE CASING
-todos.push(todo1, todo2, todo3);
-
-for(let i = 0; i < todos.length; i++) {
-  
-  let timeline = prompt(`How many days will it take to get ${todos[i][0]} done?`, "2");
-  
-  timeline = !isNaN(parseInt(timeline)) ? parseInt(timeline) : 2;
-  
-  todos[i].unshift(timeline);
-}
-
-todos.sort();
-console.log(todos, 'after sort');
-
-let longest = todos[0];
-let j = 0;
-while(j < todos.length) {
-  if(todos[j][0] > longest[0]) longest = todos[j]; //valid inline if statement
-  longest = todos[j][0] > longest[0] ? longest = todos[j] : longest = longest; //TERNARY VERSION
-  console.log(todos[j][1]);
-  j++;
-}
-console.log(longest);
-longest.push('this');
-
-
-
-
-let z = 0;
-do {
-  if(todos[z][todos[z].length - 1] !== "this") {
-    todos[z].push("done");
+/*
+1. Take a number and return the square of that number (power of 2).
+2. If a non-number argument is passed into the function, alert NaN and prompt for another response
+*/
+function sqrt(num) {
+  let convertedNum = parseInt(num);
+  if(!isNaN(convertedNum)) {
+    return alert(convertedNum * convertedNum);
+  } else {
+    let resp = prompt(`No, no, no, not NaN, a number!`);
+    sqrt(resp);
   }
-  z++;
 }
+// let numToSquare = prompt("Give me a number to square.");
+// sqrt(numToSquare);
+
+
+/*
+In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period
+*/
+function alertString(str) {
+  if(str.charAt(str.length - 1) !== '.') {
+    str += '.';
+  }
+  str = str.charAt(0).toUpperCase() + str.slice(1);
+  alert(str);
+}
+
+// let myStr = prompt('Hey, tell  me something...');
+// alertString(myStr);
+
+/*
+Create a string/FUNCTION that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”. Hint: use substring.
+*/
+function flipHalves(stringToFlip) {
+  let firstHalf = stringToFlip.substr(0, stringToFlip.length / 2);
+  let secondHalf = stringToFlip.substr(stringToFlip.length / 2);
+  alert(`${secondHalf}${firstHalf}`);
+}
+let stringy = prompt("Let me flip ya");
+flipHalves(stringy);
+
+
+
+
+/*
+BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
+*/
