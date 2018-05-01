@@ -37,8 +37,8 @@ function flipHalves(stringToFlip) {
   let secondHalf = stringToFlip.substr(stringToFlip.length / 2);
   alert(`${secondHalf}${firstHalf}`);
 }
-let stringy = prompt("Let me flip ya");
-flipHalves(stringy);
+// let stringy = prompt("Let me flip ya");
+// flipHalves(stringy);
 
 
 
@@ -46,3 +46,6 @@ flipHalves(stringy);
 /*
 BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
 */
+function definePal(string) {
+  let reversed = string.split('').reverse().join('');
+}
