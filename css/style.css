@@ -2,3 +2,15 @@ div {
   height: 200px;
   background-color: #ff0000;
 }
+
+.go-away {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-text {
+  color: #fff;
+}
